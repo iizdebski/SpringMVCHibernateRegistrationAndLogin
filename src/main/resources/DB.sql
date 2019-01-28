@@ -4,18 +4,16 @@ CREATE DATABASE IF NOT EXISTS springwithhibernatedb CHARACTER SET utf8 COLLATE u
 
 USE springwithhibernatedb;
 
-DROP TABLE IF EXISTS hibernate_sequence;
+DROP TABLE IF EXISTS student_table;
 
-CREATE TABLE hibernate_sequence(
-  id INT AUTO_INCREMENT
-    PRIMARY KEY,
-  student_name VARCHAR(100) NOT NULL,
-  gender VARCHAR(10) DEFAULT NULL,
-  technology VARCHAR(100) NOT NULL,
-  city VARCHAR(100) DEFAULT NULL,
-  email VARCHAR(50) NOT NULL,
-  password VARCHAR(20) DEFAULT NULL,
-  phone bigint(20) DEFAULT NULL,
-  CONSTRAINT id_UNIQUE
-    UNIQUE (id)
-);
+CREATE TABLE `student_table` (
+  `id` int(11) NOT NULL auto_increment,
+  `student_name` varchar(100) NOT NULL,
+  `gender` varchar(10) default NULL,
+  `technology` varchar(100) NOT NULL,
+  `city` varchar(100) default NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) default NULL,
+  `phone` bigint(20) default NULL,
+  PRIMARY KEY  (`id`)
+) ;
